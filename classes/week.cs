@@ -16,5 +16,4 @@ class Weeks: IPrinter
   }
   
   enum weeks {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday}
-    }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-interface Ione_dim : IParent
+namespace HW_3_3.interfaces;
+interface IParent : IPrinter
 {
-    int Length { get; }
-    int this[int index] { get; set; }
+    double Average();
+    void ReCreate(bool fill_rand);
 }

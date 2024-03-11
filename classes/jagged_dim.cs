@@ -1,4 +1,6 @@
 using System;
+using HW_3_3.interfaces;
+namespace HW_3_3.classes;
 class three_dim : Parent, Ijagged_dim
 {
     int high_three_dim;
@@ -7,13 +9,14 @@ class three_dim : Parent, Ijagged_dim
 
     public three_dim(int high_three_dim, bool fill_rand = false) : base(fill_rand)
     {
-        array = new int[][];
+        
         ReCreate(fill_rand);
     }
 
     public override void ReCreate(bool fill_rand)
     {
-        base.ReCreate();
+        array = new int[high_three_dim][];
+        base.ReCreate(fill_rand);
     }
     
     protected override void Rand()
@@ -54,7 +57,7 @@ class three_dim : Parent, Ijagged_dim
         return sam/array.Length;
     }
 
-    public override void average_each_three_dim()
+    public void average_each_three_dim()
     {
         for (int i = 0; i < array.Length; i++)
         {

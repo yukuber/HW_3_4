@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-interface Ijagged_dim: IParent
+namespace HW_3_3.interfaces
 {
-    void average_value_each_three_dim();
+    interface Ijagged_dim : IParent
+    {
+        void average_each_three_dim();
+    }
 }

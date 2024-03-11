@@ -1,4 +1,6 @@
 using System;
+using HW_3_3.interfaces;
+namespace HW_3_3.classes;
 
 class one_dim : Parent, Ione_dim
 {
@@ -10,10 +12,10 @@ class one_dim : Parent, Ione_dim
         ReCreate(fill_rand);
     }
     
-     public override void ReCreate (bool fill_rand)
+    public override void ReCreate (bool fill_rand)
     {
-        int[] array = new array[len_one_dim];
-        base.ReCreate();
+        int[] array = new int[len_one_dim];
+        base.ReCreate(fill_rand);
     }
     
     protected override void Rand()

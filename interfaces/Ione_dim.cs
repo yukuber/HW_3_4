@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-interface IParent : IPrinter
+namespace HW_3_3.interfaces;
+interface Ione_dim : IParent
 {
-    double Average();
-    void ReCreate();
+    void non_repeat();
 }
