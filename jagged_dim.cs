@@ -31,11 +31,11 @@ class three_dim : Parent, Ijagged_dim
     {
         for (int i = 0; i < array.Length; i++)
         {
-            Console.WriteLine($"Ââåäèòå äëèíó ïîäìàññèâà {i}");
+            Console.WriteLine($"Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã«Ã¨Ã­Ã³ Ã¯Ã®Ã¤Ã¬Ã Ã±Ã±Ã¨Ã¢Ã  {i}");
             int len_each_three_dim = Convert.ToInt32(Console.ReadLine());
             for (int j = 0; j < len_each_three_dim; j++)
             {
-                Console.Write($"Ýëåìåíò [{i}],[{j}]: ");
+                Console.Write($"ÃÃ«Ã¥Ã¬Ã¥Ã­Ã² [{i}],[{j}]: ");
                 array[i][j] = Convert.ToInt32(Console.ReadLine());
             }
         }
@@ -54,7 +54,7 @@ class three_dim : Parent, Ijagged_dim
         return sam/array.Length;
     }
 
-    public void average_each_three_dim()
+    public override void average_each_three_dim()
     {
         for (int i = 0; i < array.Length; i++)
         {
@@ -62,7 +62,7 @@ class three_dim : Parent, Ijagged_dim
             for (int j = 0; j < array[i].Length; j++)
             {
                 sum += j;
-                Console.WriteLine($"ñðåäíåå çíà÷åíèå â ïîäìàññèâå {i} = {sum / array[i].Length}");
+                Console.WriteLine($"ÑÑ€ÐµÐ´Ð½ÐµÐµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¿Ð¾Ð´Ð¼Ð°ÑÑÐ¸Ð²Ðµ {i} = {sum / array[i].Length}");
             }
         }
     }
