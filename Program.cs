@@ -2,7 +2,7 @@ using System;
 
 static void Main()
 {
-    Parent[] array = new Parent[3];
+    IParent[] array = new IParent[3];
 
     //one_dim
 
@@ -54,5 +54,5 @@ static void Main()
 
 	IPrinter printer = new Weeks();
 	Console.WriteLine("Дни недели:");
-	printer.Print();    
+	IPrinter.Print();    
 }
