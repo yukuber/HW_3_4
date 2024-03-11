@@ -3,6 +3,7 @@ using System;
 class one_dim : Parent, Ione_dim
 {
     private int[] array;
+    protected int len_one_dim;
 
     public one_dim (int len_one_dim, bool fill_rand = false) : base(fill_rand)
     {
@@ -11,6 +12,7 @@ class one_dim : Parent, Ione_dim
     
      public override void ReCreate (bool fill_rand)
     {
+        int[] array = new array[len_one_dim];
         base.ReCreate();
     }
     
