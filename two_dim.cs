@@ -8,7 +8,7 @@ sealed class two_dim : Parent, Itwo_dim
 
     public two_dim(int high_d2, int len_d2, bool fill_rand = false) : base(fill_rand)
     {
-        array = new int[,];
+        array = new int[high_d2,len_d2];
         ReCreate(fill_rand);
     }
 
@@ -33,7 +33,7 @@ sealed class two_dim : Parent, Itwo_dim
         {
             for (int j = 0; j < array.GetLength(1); j++)
             {
-                Console.Write($"Ýëåìåíò [{i},{j}]: ");
+                Console.Write($"ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ [{i},{j}]: ");
                 array[i, j] = Convert.ToInt32(Console.ReadLine());
             }
         }
