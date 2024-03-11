@@ -1,23 +1,36 @@
 using System;
-using HW_3_3.interfaces;
-using HW_3_3.classes;
-namespace HW_3_3
+using HW_3_4.interfaces;
+using HW_3_4.classes.value_givers;
+using HW_3_4.classes;
+namespace HW_3_4
 {
     class Program
     {
         static void Main()
         {
-            IParent[] array = new IParent[3];
+            IPrinter[] array = new IPrinter[8];
 
+            Int_giver ints = new();
+            String_giver strings = new();
+            Bool_giver bools = new();
+            Double_giver doubles = new();
+            
             //one_dim
 
             Console.WriteLine("Введите длину одномерного массива:");
             int len_d1 = int.Parse(Console.ReadLine());
 
-            one_dim array1 = new one_dim(len_d1);
+            Console.WriteLine("Выберите способ ввода для всех массивов (false, если случайно, true, если вручную)");
+            bool fill_rand = bool.Parse(Console.ReadLine());
 
-            array1.Average();
-            array1.non_repeat();
+            one_dim<int> int_one_dim = new(ints, len_d1,fill_rand);
+            array[0] = int_one_dim;
+            one_dim<string> string_one_dim = new(strings, len_d1,fill_rand);
+            array[1] = string_one_dim;
+            one_dim<double> double_one_dim = new(doubles, len_d1, fill_rand);
+            array[2] = double_one_dim;
+            one_dim<bool> bool_one_dim = new(bools, len_d1, fill_rand);
+            array[3] = bool_one_dim;
 
             // two_dim
             
@@ -27,39 +40,14 @@ namespace HW_3_3
             Console.WriteLine("Введите длину двумерного массива");
             int len_d2 = int.Parse(Console.ReadLine());
 
-            two_dim array2 = new(high_d2, len_d2);
-
-            array2.Average();
-            array2.obr_chet();
-
-            //jagged_dim
-
-            Console.WriteLine("Введите длину ступенчатого массива");
-            int high_d3 = int.Parse(Console.ReadLine());
-
-            three_dim array3 = new(high_d3);
-
-            array3.Average();
-            array3.average_each_three_dim();
-            array3.muliply_three_dim();
-            array3.Print();
-
-            
-            array[0] = array1;
-            array[1] = array2;
-            array[2] = array3;
-
-            for (int i = 0; i < 3; i++)
-            {
-                array[i].Print();
-                Console.Write("Среднее значение: ");
-                Console.WriteLine(array[i].Average());
-                Console.WriteLine();
-            }
-
-            IPrinter days = new Weeks();
-            Console.WriteLine("Дни недели:");
-            days.Print();    
+            two_dim<int> int_two_dim = new(ints, high_d2, len_d2, fill_rand);
+            array[4] = int_two_dim;
+            two_dim<string> string_two_dim = new(strings, high_d2, len_d2, fill_rand);
+            array[5] = string_two_dim;
+            two_dim<double> double_two_dim = new(doubles, high_d2, len_d2, fill_rand);
+            array[6] = double_two_dim;
+            two_dim<bool> bool_two_dim = new(bools, high_d2, len_d2, fill_rand);
+            array[7] = bool_two_dim;
         }
     }
 }
