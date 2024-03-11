@@ -5,18 +5,17 @@ namespace HW_3_3.classes;
 
 sealed class two_dim : Parent, Itwo_dim
 {
-    int high_d2;
-    int len_d2;
+
     private int[,] array;
 
     public two_dim(int high_d2, int len_d2, bool fill_rand = false) : base(fill_rand)
     {
+        array = new int[high_d2,len_d2];
         ReCreate(fill_rand);
     }
 
     public override void ReCreate(bool fill_rand)
     {
-        array = new int[high_d2,len_d2];
         base.ReCreate(fill_rand);
     }
 

@@ -3,19 +3,19 @@ using HW_3_3.interfaces;
 namespace HW_3_3.classes;
 class three_dim : Parent, Ijagged_dim
 {
-    int high_three_dim;
+
 
     private int[][] array;
 
     public three_dim(int high_three_dim, bool fill_rand = false) : base(fill_rand)
     {
-        
+        array = new int[high_three_dim][];
         ReCreate(fill_rand);
     }
 
     public override void ReCreate(bool fill_rand)
     {
-        array = new int[high_three_dim][];
+
         base.ReCreate(fill_rand);
     }
     

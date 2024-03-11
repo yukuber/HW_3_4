@@ -1,20 +1,21 @@
 using System;
 using HW_3_3.interfaces;
+using System.Linq;
 namespace HW_3_3.classes;
 
 class one_dim : Parent, Ione_dim
 {
     private int[] array;
-    protected int len_one_dim;
 
     public one_dim (int len_one_dim, bool fill_rand = false) : base(fill_rand)
     {
+        array = new int[len_one_dim];
         ReCreate(fill_rand);
     }
     
     public override void ReCreate (bool fill_rand)
     {
-        int[] array = new int[len_one_dim];
+        
         base.ReCreate(fill_rand);
     }
     
