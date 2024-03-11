@@ -6,7 +6,7 @@ static void Main()
 
     //one_dim
 
-    Console.WriteLine("Введите длину одномерного массива:");
+    Console.WriteLine("Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°:");
     int len_d1 = int.Parse(Console.ReadLine());
 
     one_dim array1 = new one_dim(len_d1);
@@ -16,10 +16,10 @@ static void Main()
 
     // two_dim
     
-    Console.WriteLine("Введите высоту массива");
+    Console.WriteLine("Р’РІРµРґРёС‚Рµ РІС‹СЃРѕС‚Сѓ РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°");
     int high_d2 = int.Parse(Console.ReadLine());
 
-    Console.WriteLine("Введите длину массивов");
+    Console.WriteLine("Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°");
     int len_d2 = int.Parse(Console.ReadLine());
 
     two_dim array2 = new(high_d2, len_d2);
@@ -29,7 +29,7 @@ static void Main()
 
     //jagged_dim
 
-    Console.WriteLine("Введите высоту массива");
+    Console.WriteLine("Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ СЃС‚СѓРїРµРЅС‡Р°С‚РѕРіРѕ РјР°СЃСЃРёРІР°");
     int high_d3 = int.Parse(Console.ReadLine());
 
     three_dim array3 = new(high_d3);
@@ -47,14 +47,12 @@ static void Main()
     for (int i = 0; i < 3; i++)
     {
         array[i].Print();
-        Console.Write("Среднее значение: ");
+        Console.Write("РЎСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ: ");
         Console.WriteLine(array[i].Average());
         Console.WriteLine();
     }
 
 	IPrinter printer = new Weeks();
-	Console.WriteLine("Дни недели:");
-	printer.Print(); IPrinter printer = new Weeks();
-	Console.WriteLine("Дни недели:");
+	Console.WriteLine("Р”РЅРё РЅРµРґРµР»Рё:");
 	printer.Print();    
 }
