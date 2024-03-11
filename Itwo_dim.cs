@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 interface Itwo_dim: IParent
 {
-    void Snake_Print();
+    void obr_chet();
 }
