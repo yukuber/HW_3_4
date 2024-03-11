@@ -4,10 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task_3_4
+interface Itwo_dim: IParent
 {
-    interface ITwoDim: IParent
-    {
-        void Snake_Print();
-    }
+    void Snake_Print();
 }
