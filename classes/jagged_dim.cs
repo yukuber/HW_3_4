@@ -34,11 +34,11 @@ class three_dim : Parent, Ijagged_dim
     {
         for (int i = 0; i < array.Length; i++)
         {
-            Console.WriteLine($"Ââåäèòå äëèíó ïîäìàññèâà {i}");
+            Console.WriteLine($"введите значение элемента {i}");
             int len_each_three_dim = Convert.ToInt32(Console.ReadLine());
             for (int j = 0; j < len_each_three_dim; j++)
             {
-                Console.Write($"Ýëåìåíò [{i}],[{j}]: ");
+                Console.Write($"элемент [{i}],[{j}]: ");
                 array[i][j] = Convert.ToInt32(Console.ReadLine());
             }
         }
