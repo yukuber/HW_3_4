@@ -4,12 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task_3_4
+interface Ione_dim : IParent
 {
-    interface IOneDim : IParent
-    {
-        int Length { get; }
-
-        int this[int index] { get; set; }
-    }
+    int Length { get; }
+    int this[int index] { get; set; }
 }
