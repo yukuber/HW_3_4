@@ -4,10 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task_3_4
+interface IParent : IPrinter
 {
-    interface IParent : IPrinter
-    {
-        double AverageValue();
-    }
+    double Average();
 }
