@@ -4,10 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task_3_4
+interface Ijagged_dim: IParent
 {
-    interface IJaggedDim: IParent
-    {
-        void AverageValueMassives();
-    }
+    void average_value_each_three_dim();
 }
