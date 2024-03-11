@@ -8,7 +8,7 @@ abstract class Parent
         this.fill_rand = fill_rand;
     }
 
-    public virtual void ReCreate(bool fill_rand = false)
+    protected virtual void ReCreate(bool fill_rand = false)
         {
             if (fill_rand)
             {
