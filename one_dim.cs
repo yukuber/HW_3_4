@@ -1,24 +1,18 @@
 using System;
 
-class one_dim : Parent, Ione_dim//класс одномерного массива
+class one_dim : Parent, Ione_dim
 {
     private int[] array;
-
-    public int Length
-    {
-        get { return array.Length}
-    }
-    public int this[int index]
-    {
-        get { return array[index]; }
-        set { array[index] = value; }
-    }
 
     public one_dim (int len_one_dim, bool fill_rand = false) : base(fill_rand)
     {
         ReCreate(fill_rand);
     }
     
+     public override void ReCreate (bool fill_rand)
+    {
+        base.ReCreate();
+    }
     
     protected override void Rand()
     {
@@ -27,24 +21,22 @@ class one_dim : Parent, Ione_dim//класс одномерного массива
             array[i] = rnd.Next(-100,100);
         }
     }
-    public override void ReCreate (bool fill_rand)
-    {
-        base.ReCreate();
-    }
+   
     protected override void Manual()
     {
         for (int i = 0; i<array.Length; i++)
-            {
-                Console.WriteLine($"значение {i}:");
-                int x = int.Parse(Console.ReadLine());
-                array[i] = x;
-            }
+        {
+            Console.WriteLine($"СЌР»РµРјРµРЅС‚ {i}:");
+            int x = int.Parse(Console.ReadLine());
+            array[i] = x;
+        }
     }
+    
     public override void Print()
     {
         Print(array);
     }
-    public override double Average() //вычисление среднего арифметического 
+    public override double Average()
     {
         double sam = 0;
         foreach(int elem in array)
