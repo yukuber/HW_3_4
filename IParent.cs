@@ -7,4 +7,5 @@ using System.Threading.Tasks;
 interface IParent : IPrinter
 {
     double Average();
+    void ReCreate();
 }
