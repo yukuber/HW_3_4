@@ -4,10 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task_3_4
+interface IPrinter
 {
-    interface IPrinter
-    {
-        void Print();
-    }
+    void Print();
 }
