@@ -25,12 +25,16 @@ namespace HW_3_4
 
             one_dim<int> int_one_dim = new(ints, len_d1,fill_rand);
             array[0] = int_one_dim;
+            Console.WriteLine();
             one_dim<string> string_one_dim = new(strings, len_d1,fill_rand);
+            Console.WriteLine();
             array[1] = string_one_dim;
             one_dim<double> double_one_dim = new(doubles, len_d1, fill_rand);
             array[2] = double_one_dim;
+            Console.WriteLine();
             one_dim<bool> bool_one_dim = new(bools, len_d1, fill_rand);
             array[3] = bool_one_dim;
+            Console.WriteLine();
 
             // two_dim
             

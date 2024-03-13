@@ -1,7 +1,7 @@
 using System;
 using HW_3_4.interfaces;
 
-namespace HW_3_4.classes;
+namespace HW_3_4.classes{
 abstract class Parent<T> : IParent, IPrinter  
 {
     protected Ivalue_giver<T> value_giver;
@@ -32,4 +32,5 @@ abstract class Parent<T> : IParent, IPrinter
     protected abstract void Manual();
     
     public abstract void Print();
+}
 }
