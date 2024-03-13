@@ -2,12 +2,12 @@ using System;
 using HW_3_4.interfaces;
 
 namespace HW_3_4.classes;
-abstract class Parent<Type> : IParent, IPrinter  
+abstract class Parent<T> : IParent, IPrinter  
 {
-    protected Ivalue_giver<Type> value_giver;
+    protected Ivalue_giver<T> value_giver;
     protected bool fill_rand = false;
     public static Random rnd = new Random();
-    protected Parent(Ivalue_giver<Type> value_giver, bool fill_rand)
+    protected Parent(Ivalue_giver<T> value_giver, bool fill_rand)
     {
         this.value_giver = value_giver;
         this.fill_rand = fill_rand;
