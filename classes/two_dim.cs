@@ -2,14 +2,14 @@ using System;
 using HW_3_4.interfaces;
 
 namespace HW_3_4.classes;
-sealed class two_dim<Type> : Parent<Type>
+sealed class two_dim<T> : Parent<T>
 {
 
-    private Type[,] array;
+    private T[,] array;
 
-    public two_dim(Ivalue_giver<Type> value_giver, int high_d2, int len_d2, bool fill_rand = false) : base(value_giver, fill_rand)
+    public two_dim(Ivalue_giver<T> value_giver, int high_d2, int len_d2, bool fill_rand = false) : base(value_giver, fill_rand)
     {
-        array = new Type[high_d2,len_d2];
+        array = new T[high_d2,len_d2];
         Create();
     }
 
