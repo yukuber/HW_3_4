@@ -2,13 +2,14 @@ using System;
 using HW_3_4.interfaces;
 
 namespace HW_3_4.classes;
-class one_dim<Type> : Parent<Type>
-{
-    private Type[] array;
 
-    public one_dim (Ivalue_giver<Type> value_giver, int len_one_dim, bool fill_rand = false) : base(value_giver, fill_rand)
+class one_dim<T> : Parent<T>
+{
+    private T[] array;
+
+    public one_dim (Ivalue_giver<T> value_giver, int len_one_dim, bool fill_rand = false) : base(value_giver, fill_rand)
     {
-        array = new Type[len_one_dim];
+        array = new T[len_one_dim];
         Create();
     }
     
